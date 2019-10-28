@@ -1,0 +1,28 @@
+include mixins/mixin
+
+doctype html
+html(lang="en")
+
+	//- Including the Head Tag.
+	include includes/head
+
+	//- Body Contents.
+	body
+		#main-content
+
+			//- Including the Header.
+			include includes/header
+
+			main#primary
+				.container
+					- for (var x = 0; x < 6; x++)
+						.square
+
+			//- Including the Footer.
+			include includes/footer
+
+			<!-- .main -->
+		<!-- #main-content -->
+
+		// Scripts.
+		script(src="assets/js/app.bundle.js")
